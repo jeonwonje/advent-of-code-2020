@@ -2,8 +2,7 @@ const fs = require('fs')
 
 let input = fs.readFileSync('file.txt', 'utf8').split(/\r?\n/);
 let numberInput, charInput, password, freq;
-let a = 0;
-let b = 0;
+let a = 0, b = 0;
 
 // Part 1
 for (let i = 0; i < input.length; i++) {
@@ -34,6 +33,7 @@ for (let i = 0; i < input.length; i++) {
 	} else if (password[0].charAt(numberInput[0] - 1) != charInput[0] && password[0].charAt(numberInput[1] - 1) === charInput[0]) {
 		b++; // If position 2 contains the number, position 1 doesnt
 	}
-console.log(b)
+
 }
 
+console.log(b)
